@@ -9,7 +9,6 @@ RUN apk update \
     && apk add \
     autoconf \
     bash \
-    boost-dev \
     build-base \
     cmake \
     curl \
@@ -18,7 +17,6 @@ RUN apk update \
     lcov \
     libtool \
     pkgconf \
-    poco-dev \
     python3-dev \
     samurai \
     starship \

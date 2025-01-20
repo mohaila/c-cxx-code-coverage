@@ -13,8 +13,14 @@ Tools used:
 - Visual Studio code with Dev Containers plugin
 - Docker 
 
-Libraries used:
-- gtest and gmock for unit testing
+Libraries used as git submodules:
+- googletest for unit testing
+- nanobind for Python/C-C++ binding
+
+After cloning, please use this command:
+```bash
+git submodule update --init --recursive
+```
 
 ## Sub projects:
 - libSystem: library for a dummy system with connect/disconnect, resource open/close, lock/unlock and process functions.
@@ -27,6 +33,7 @@ Libraries used:
 - libWapp: libApp refactored to use libSystem wrapper
 - app3: app2 refactored to use libWapp
 - app3-test: unit testing libWapp using libSystem Wrapper
+- py3System: Python binding for libSystem using nanobind
 
 ### Testing
 ```sh

@@ -9,3 +9,6 @@ target_link_libraries(${TARGET} PRIVATE
     App
     System
 )
+if(NOT CMAKE_BUILD_TYPE STREQ "Debug")
+    set_target_properties(${TARGET} PROPERTIES LINK_FLAGS_RELEASE -s) 
+endif()

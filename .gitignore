@@ -1,2 +1,4 @@
 /buildir
 /.vscode
+/extern/googletest
+/extern/nanobind

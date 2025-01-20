@@ -1,11 +1,11 @@
-set(TARGET app1)
-set(SRC main.c)
+set(TARGET py3System)
+set(SRC module.cpp)
 
-add_executable(${TARGET} ${SRC})
-target_include_directories(${TARGET} PRIVATE 
+nanobind_add_module(${TARGET} ${SRC})
+target_include_directories(${TARGET} PRIVATE
     ${CMAKE_SOURCE_DIR}/source
 )
-target_link_libraries(${TARGET} PRIVATE 
+target_link_libraries(${TARGET} PRIVATE
     System
 )
 if(NOT CMAKE_BUILD_TYPE STREQUAL "Debug")
