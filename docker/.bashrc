@@ -1,12 +1,6 @@
-alias ls='ls --color'
-alias a='ls -a'
-alias l='ls -l'
-alias al='ls -al'
-alias md='mkdir -p'
-alias cls='clear'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias h='history'
-alias rec='h|grep -i'
+if [ -f ~/.bash_aliases ]; then
+	source ~/.bash_aliases
+fi
 
 eval "$(starship init bash)"
+
