@@ -34,20 +34,10 @@ def app(user: str, password: str, resource: str, connection_id: int, resource_id
         py3System.system_disconnect(connection_id)
         return result.ko
 
-    status = py3System.resource_unlock(connection_id, resource_id)
+    status = py3System.resource_close(connection_id, resource_id)
     if status != result.ok:
-        py3System.resource_close(connection_id, resource_id)
         py3System.system_disconnect(connection_id)
         return result.ko
 
     return py3System.system_disconnect(connection_id)                 
-    
-
-if __name__ == '__main__':
-    user = 'admin'
-    password = 'Paswd123'
-    resource = 'scada'
-    connection_id = 0
-    resource_id = 0
-
-    app(user, password, resource, connection_id, resource_id)    
+      
