@@ -34,6 +34,10 @@ git submodule update --init --recursive
 - app3: app2 refactored to use libWapp
 - app3-test: unit testing libWapp using libSystem Wrapper
 - py3System: Python binding for libSystem using nanobind
+- libCWrapper: Wrapper using C struct with function pointers
+- libCWapp: libApp refactored to use libCWrapper
+- app4: app2 refcatored to use libCWapp
+- app4-test: unit testing libCWapp
 
 ### Testing
 ```sh
